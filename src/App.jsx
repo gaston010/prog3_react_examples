@@ -1,9 +1,10 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import appLogo from "./assets/react.svg";
 
-import { TaskList } from "./components/Task";
-import { ShoppingList } from "./components/ShoppingList";
-
+// import { TaskList } from "./components/Task";
+// import { ShoppingList } from "./components/ShoppingList";
+import { Counter } from "./components/Counter";
 function FooterBar() {
     return (
         <footer className="footer">
@@ -74,7 +75,7 @@ function App() {
         <div className="hero is-fullheight is-flex is-flex-direction-column">
             <NavBar />
             <div className="container">
-                <ShoppingList />
+                <Counter />
             </div>
             <FooterBar />
         </div>

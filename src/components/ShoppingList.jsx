@@ -1,13 +1,15 @@
 import data from "../assets/shopping_list.json";
+import PropTypes from 'prop-types';
+import '../components/styles.css';
 
-function ListItem({ itemName, isBought, isPriority = false }) {
-    return isBought ? (
-        <li style={isPriority ? { color: "red" } : null}>
-            <del>{itemName}</del>
-        </li>
-    ) : (
-        <li style={isPriority ? { color: "red" } : null}>{itemName}</li>
-    );
+function ListItem(props) {
+
+
+    const items = <li> <del>{props.itemName}</del> </li>
+
+    const status = <li>{props.itemName}</li>
+
+    return (props.isBought ? status : <li className="pItems">{items} </li>);
 }
 
 function ShoppingList() {
@@ -22,6 +24,16 @@ function ShoppingList() {
                 })}
         </ul>
     );
+}
+
+ListItem.proptypes = {
+    itemName: PropTypes.string,
+    isBought: PropTypes.bool,
+}
+
+ListItem.defaultProps = {
+    itemName: "Item",
+    isBought: false,
 }
 
 export { ShoppingList };
