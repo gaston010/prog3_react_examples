@@ -1,7 +1,8 @@
 import React from "react";
 import appLogo from "./assets/react.svg";
+import { Posting } from "./components/Post.jsx";
 
-import { TaskList } from "./components/Task";
+// import { TaskList } from "./components/Task";
 
 function FooterBar() {
     return (
@@ -72,8 +73,10 @@ function App() {
     return (
         <div className="hero is-fullheight is-flex is-flex-direction-column">
             <NavBar />
-            <div className="container">
-                <TaskList listName="Tareas de Programación 3" />
+            <div>
+                {/* <TaskList listName="Tareas de Programación 3" /> */}
+                <Posting postID={12} />
+                <Posting postID={} />
             </div>
             <FooterBar />
         </div>
